@@ -1,0 +1,621 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+:root {
+    --cor-primaria: #0d6efd;
+    --cor-primaria-escura: #0a58ca;
+    --cor-secundaria: #1f2937;
+    --cor-destaque: #2563eb;
+    --cor-fundo: #ffffff;
+    --cor-fundo-secundario: #f5f8fc;
+    --cor-texto: #1f2937;
+    --cor-texto-secundario: #6b7280;
+    --cor-borda: #e5e7eb;
+
+    --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 15px 35px rgba(13, 110, 253, 0.15);
+
+    --transicao: all 0.3s ease;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    min-height: 70px;
+    transition: var(--transicao);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+}
+
+.navbar-brand:hover {
+    color: var(--cor-primaria);
+}
+
+.nav-link {
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    margin-left: 10px;
+    transition: var(--transicao);
+}
+
+.nav-link:hover {
+    color: var(--cor-primaria);
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f4f8ff 100%
+        );
+}
+
+.hero-section h1 {
+    color: var(--cor-secundaria);
+    letter-spacing: -1px;
+}
+
+.hero-section h2 {
+    font-weight: 500;
+}
+
+.hero-section p {
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   IMAGEM DE PERFIL
+========================================= */
+
+.profile-image-container {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d6efd,
+            #6ea8fe
+        );
+
+    padding: 8px;
+
+    box-shadow:
+        0 20px 50px rgba(13, 110, 253, 0.25);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background-color: #e9ecef;
+
+    border: 6px solid #ffffff;
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-title span {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.section-title h2 {
+    color: var(--cor-secundaria);
+    margin-top: 10px;
+}
+
+.section-description {
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.about-card {
+    border: 1px solid var(--cor-borda);
+    transition: var(--transicao);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover) !important;
+}
+
+.about-card p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARDS DE INFORMAÇÃO
+========================================= */
+
+.info-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    transition: var(--transicao);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover) !important;
+}
+
+
+/* =========================================
+   ÍCONES
+========================================= */
+
+.icon-box {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e8f1ff;
+    color: var(--cor-primaria);
+
+    border-radius: 14px;
+
+    font-size: 1.5rem;
+}
+
+.icon-box-large {
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+}
+
+
+/* =========================================
+   CONHECIMENTOS
+========================================= */
+
+.knowledge-card {
+    border: 1px solid var(--cor-borda);
+    transition: var(--transicao);
+}
+
+.knowledge-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover) !important;
+}
+
+.knowledge-card h3 {
+    color: var(--cor-secundaria);
+}
+
+
+/* =========================================
+   HABILIDADES
+========================================= */
+
+.skill-card {
+    min-height: 150px;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: var(--cor-fundo);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra-suave);
+
+    transition: var(--transicao);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cor-primaria);
+    box-shadow: var(--sombra-hover);
+}
+
+.skill-card i {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROJETOS FUTUROS
+========================================= */
+
+.project-card {
+    border: 1px solid var(--cor-borda);
+    transition: var(--transicao);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover) !important;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   OBJETIVOS
+========================================= */
+
+.objective-card {
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #ffffff
+        );
+
+    border: 1px solid var(--cor-borda);
+}
+
+.objective-card p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.contact-card {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background-color: var(--cor-fundo);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 18px;
+
+    color: var(--cor-texto);
+
+    box-shadow: var(--sombra-suave);
+
+    transition: var(--transicao);
+}
+
+.contact-card:hover {
+    color: var(--cor-primaria);
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contact-card span {
+    color: var(--cor-texto-secundario);
+    word-break: break-word;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 30px 0;
+
+    background-color: #111827;
+
+    color: #ffffff;
+}
+
+.footer p {
+    color: #d1d5db;
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+========================================= */
+
+.btn-topo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: var(--transicao);
+
+    z-index: 999;
+}
+
+.btn-topo:hover {
+    background-color: var(--cor-primaria-escura);
+    transform: translateY(-3px);
+}
+
+.btn-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ANIMAÇÕES DE ENTRADA
+========================================= */
+
+.animar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.animar.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ANIMAÇÃO DO HERO
+========================================= */
+
+.hero-entrada {
+    animation: aparecerHero 1s ease forwards;
+}
+
+.hero-entrada-imagem {
+    animation: aparecerImagem 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes aparecerHero {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes aparecerImagem {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section .d-flex {
+        justify-content: center;
+    }
+
+    .profile-image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .profile-image-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        width: 100%;
+    }
+
+    .hero-section .d-flex {
+        width: 100%;
+    }
+
+    .contact-card {
+        padding: 30px 15px;
+    }
+
+    .btn-topo {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
